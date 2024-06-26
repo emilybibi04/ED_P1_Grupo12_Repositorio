@@ -1,1 +1,1 @@
-# Proyecto_EstructurasDeDatos
+# Proyecto de Estructuras de Datos
