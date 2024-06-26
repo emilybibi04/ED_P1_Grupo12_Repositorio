@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="fondo_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.LoginController">
+   <children>
+      <VBox fx:id="vbox_izq_login" alignment="TOP_RIGHT" prefHeight="700.0" prefWidth="500.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" prefHeight="80.0" prefWidth="413.0" text="T U R B O C A R" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" prefHeight="52.0" prefWidth="443.0" text="INICIAR" textFill="#373766">
+               <font>
+                  <Font name="Horizon Bold" size="51.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="59.0" prefWidth="443.0" text="SESION" textFill="#373766">
+               <font>
+                  <Font name="Horizon Bold" size="51.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="vbox_der_login" prefHeight="200.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="correo_label_login" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="93.0" prefWidth="420.0" text="C o r r e o  E l e c t r ó n i c o" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="17.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vbox_field1_login" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="420.0">
+               <children>
+                  <TextField fx:id="text_correo_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="328.0" style="-fx-border-color: white;" />
+               </children>
+            </VBox>
+            <Label alignment="BOTTOM_RIGHT" prefHeight="29.0" prefWidth="420.0" text="C o n t r a s e ñ a" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="17.0" />
+               </font>
+            </Label>
+            <VBox id="vbox_field2_login" fx:id="vbox_field2_login" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="420.0">
+               <children>
+                  <TextField fx:id="text_contra_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="328.0" style="-fx-border-color: white;" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="58.0" prefWidth="420.0">
+               <children>
+                  <Button id="boton_login" fx:id="boton_login" cache="true" mnemonicParsing="false" prefHeight="33.0" prefWidth="144.0" style="-fx-background-color: white;" text="Iniciar Sesión" textFill="#373766">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="410.0" prefWidth="470.0">
+               <children>
+                  <Button id="boton_login" fx:id="boton_regreso_l" cache="true" mnemonicParsing="false" onAction="#switchToInicioL" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: clear;" text="Regresar" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
