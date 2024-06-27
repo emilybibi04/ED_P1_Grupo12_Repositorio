@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\LoginController.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\InicioController.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\HistorialServicio.java
@@ -10,15 +9,9 @@ C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\jav
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\ConjuntoVehiculos.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\RegistroController.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\HistorialAccidentes.java
+C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\InformacionController.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\Locacion.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\module-info.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\Motor.java
+C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\MenuController.java
 C:\Users\jorge\OneDrive\Documentos\GitHub\ED_P1_Grupo12_Repositorio\src\main\java\com\espol\ed_p1_grupo12\InformacionVehiculo.java
-=======
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/module-info.java
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/com/espol/ed_p1_grupo12/RegistroController.java
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/com/espol/ed_p1_grupo12/LoginController.java
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/com/espol/ed_p1_grupo12/App.java
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/com/espol/ed_p1_grupo12/MenuController.java
-/Users/emilyvalarezo/Desktop/ED_P1_Grupo12_Repositorio/src/main/java/com/espol/ed_p1_grupo12/InicioController.java
->>>>>>> main

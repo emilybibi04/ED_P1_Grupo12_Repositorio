@@ -1,4 +1,5 @@
 com\espol\ed_p1_grupo12\ConjuntoVehiculos.class
+com\espol\ed_p1_grupo12\InformacionController.class
 com\espol\ed_p1_grupo12\HistorialServicio.class
 module-info.class
 com\espol\ed_p1_grupo12\HistorialAccidentes.class
@@ -6,6 +7,7 @@ com\espol\ed_p1_grupo12\Vehiculo.class
 com\espol\ed_p1_grupo12\Accidente.class
 com\espol\ed_p1_grupo12\InformacionVehiculo.class
 com\espol\ed_p1_grupo12\InicioController.class
+com\espol\ed_p1_grupo12\MenuController.class
 com\espol\ed_p1_grupo12\Locacion.class
 com\espol\ed_p1_grupo12\App.class
 com\espol\ed_p1_grupo12\LoginController.class
