@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="fondo_registro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Registro.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.RegistroController">
+<HBox fx:id="fondo_registro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Registro.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.RegistroController">
    <children>
       <VBox fx:id="vbox_izq_registro" alignment="TOP_RIGHT" prefHeight="700.0" prefWidth="500.0">
          <children>
@@ -46,11 +46,16 @@
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="58.0" prefWidth="420.0">
                <children>
-                  <Button fx:id="boton_registro" mnemonicParsing="false" prefHeight="32.0" prefWidth="209.0" style="-fx-background-color: #373766;" text="Confirmar Registro" textFill="WHITE">
+                  <Button fx:id="boton_registro" mnemonicParsing="false" onMouseClicked="#onRegisterButtonClick" prefHeight="32.0" prefWidth="209.0" style="-fx-background-color: #373766;" text="Confirmar Registro" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="17.0" />
                      </font>
                   </Button>
+                  <Label fx:id="status" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="430.0" textAlignment="RIGHT" textFill="#373766">
+                     <font>
+                        <Font name="Montserrat Regular" size="17.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="410.0" prefWidth="470.0">

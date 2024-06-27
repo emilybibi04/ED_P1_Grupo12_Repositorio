@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.espol.ed_p1_grupo12.CatalogoVehiculosController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <TableView fx:id="vehiculosTableView" prefWidth="800" prefHeight="600">
+        <columns>
+            <TableColumn text="Marca" fx:id="marcaColumn" prefWidth="100"/>
+            <TableColumn text="Modelo" fx:id="modeloColumn" prefWidth="100"/>
+            <TableColumn text="Año" fx:id="añoColumn" prefWidth="100"/>
+            <TableColumn text="Precio" fx:id="precioColumn" prefWidth="100"/>
+            <TableColumn text="Kilometraje" fx:id="kilometrajeColumn" prefWidth="100"/>
+            <TableColumn text="Motor" fx:id="motorColumn" prefWidth="100"/>
+            <TableColumn text="Transmisión" fx:id="transmisionColumn" prefWidth="100"/>
+            <TableColumn text="Peso" fx:id="pesoColumn" prefWidth="100"/>
+            <TableColumn text="Ubicación" fx:id="ubicacionColumn" prefWidth="100"/>
+            <TableColumn text="Historial de Accidentes" fx:id="historialAccidentesColumn" prefWidth="150"/>
+            <TableColumn text="Historial de Reparaciones" fx:id="historialReparacionesColumn" prefWidth="150"/>
+            <TableColumn text="Historial de Mantenimiento" fx:id="historialMantenimientoColumn" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

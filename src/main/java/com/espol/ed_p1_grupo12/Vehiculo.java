@@ -4,119 +4,144 @@
  */
 package com.espol.ed_p1_grupo12;
 
-/**
- *
- * @author jorge
- */
-public class Vehiculo {
-    //private int peso;
-    private static int codigo=0;
+import java.io.Serializable;
+
+public class Vehiculo implements Serializable {
     private String marca;
     private String modelo;
     private int año;
-    private float kilometraje;
-    private float precio;
-    private Motor motor;
-    private Transmision transmision;
-    private Locacion locacion;
-    private HistorialServicio historialDeServicio;
-    private HistorialAccidentes historialDeAccidente;
+    private double precio;
+    private int kilometraje;
+    private String motor;
+    private String transmision;
+    private double peso;
+    private String ubicacion;
+    private String historialAccidentes;
+    private String historialReparaciones;
+    private String historialMantenimiento;
+    private String foto;
 
-    public Vehiculo(String marca, String modelo, int año, float kilometraje, float precio, Motor motor, Transmision transmision, Locacion locacion, HistorialServicio historialDeServicio, HistorialAccidentes historialDeAccidente) {
+    // Constructor
+    public Vehiculo(String marca, String modelo, int año, double precio, int kilometraje, String motor,
+                    String transmision, double peso, String ubicacion, String historialAccidentes,
+                    String historialReparaciones, String historialMantenimiento, String foto) {
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
-        this.kilometraje = kilometraje;
         this.precio = precio;
+        this.kilometraje = kilometraje;
         this.motor = motor;
         this.transmision = transmision;
-        this.locacion = locacion;
-        this.historialDeServicio = historialDeServicio;
-        this.historialDeAccidente = historialDeAccidente;
-        this.codigo=codigo++;
+        this.peso = peso;
+        this.ubicacion = ubicacion;
+        this.historialAccidentes = historialAccidentes;
+        this.historialReparaciones = historialReparaciones;
+        this.historialMantenimiento = historialMantenimiento;
+        this.foto = foto;
+        
     }
-    public int getCodigo(){
-        return codigo;
-    }
+
     public String getMarca() {
         return marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public int getAño() {
-        return año;
-    }
-
-    public float getKilometraje() {
-        return kilometraje;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public Motor getMotor() {
-        return motor;
-    }
-
-    public Transmision getTransmision() {
-        return transmision;
-    }
-
-    public Locacion getLocacion() {
-        return locacion;
-    }
-
-    public HistorialServicio getHistorialDeServicio() {
-        return historialDeServicio;
-    }
-
-    public HistorialAccidentes getHistorialDeAccidente() {
-        return historialDeAccidente;
     }
 
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
+    public String getModelo() {
+        return modelo;
+    }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public int getAño() {
+        return año;
     }
 
     public void setAño(int año) {
         this.año = año;
     }
 
-    public void setKilometraje(float kilometraje) {
-        this.kilometraje = kilometraje;
+    public double getPrecio() {
+        return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public void setMotor(Motor motor) {
+    public int getKilometraje() {
+        return kilometraje;
+    }
+
+    public void setKilometraje(int kilometraje) {
+        this.kilometraje = kilometraje;
+    }
+
+    public String getMotor() {
+        return motor;
+    }
+
+    public void setMotor(String motor) {
         this.motor = motor;
     }
 
-    public void setTransmision(Transmision transmision) {
+    public String getTransmision() {
+        return transmision;
+    }
+
+    public void setTransmision(String transmision) {
         this.transmision = transmision;
     }
 
-    public void setLocacion(Locacion locacion) {
-        this.locacion = locacion;
+    public double getPeso() {
+        return peso;
     }
 
-    public void setHistorialDeServicio(HistorialServicio historialDeServicio) {
-        this.historialDeServicio = historialDeServicio;
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
-    public void setHistorialDeAccidente(HistorialAccidentes historialDeAccidente) {
-        this.historialDeAccidente = historialDeAccidente;
+    public String getUbicacion() {
+        return ubicacion;
     }
-    
-    
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String getHistorialAccidentes() {
+        return historialAccidentes;
+    }
+
+    public void setHistorialAccidentes(String historialAccidentes) {
+        this.historialAccidentes = historialAccidentes;
+    }
+
+    public String getHistorialReparaciones() {
+        return historialReparaciones;
+    }
+
+    public void setHistorialReparaciones(String historialReparaciones) {
+        this.historialReparaciones = historialReparaciones;
+    }
+
+    public String getHistorialMantenimiento() {
+        return historialMantenimiento;
+    }
+
+    public void setHistorialMantenimiento(String historialMantenimiento) {
+        this.historialMantenimiento = historialMantenimiento;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 }

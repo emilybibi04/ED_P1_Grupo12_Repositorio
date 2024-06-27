@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CrearVehiculoController">
+    <Label text="Marca:" />
+    <TextField fx:id="marcaField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label text="Modelo:" GridPane.rowIndex="1" />
+    <TextField fx:id="modeloField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Año:" GridPane.rowIndex="2" />
+    <TextField fx:id="añoField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Precio:" GridPane.rowIndex="3" />
+    <TextField fx:id="precioField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Kilometraje:" GridPane.rowIndex="4" />
+    <TextField fx:id="kilometrajeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label text="Motor:" GridPane.rowIndex="5" />
+    <TextField fx:id="motorField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label text="Transmisión:" GridPane.rowIndex="6" />
+    <TextField fx:id="transmisionField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label text="Peso:" GridPane.rowIndex="7" />
+    <TextField fx:id="pesoField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label text="Ubicación:" GridPane.rowIndex="8" />
+    <TextField fx:id="ubicacionField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label text="Historial de Accidentes:" GridPane.rowIndex="9" />
+    <TextField fx:id="historialAccidentesField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <Label text="Historial de Reparaciones:" GridPane.rowIndex="10" />
+    <TextField fx:id="historialReparacionesField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+    <Label text="Historial de Mantenimiento:" GridPane.rowIndex="11" />
+    <TextField fx:id="historialMantenimientoField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+    <Label text="Foto:" GridPane.rowIndex="12" />
+    <TextField fx:id="fotoField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+    <Button onAction="#handleSubirFoto" text="Subir Foto" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+
+    <Button onAction="#handleCrearVehiculo" text="Crear" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+   <Button fx:id="Volver" onMouseClicked="#switchToInicio" prefHeight="25.0" prefWidth="71.0" text="Volver" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

@@ -4,6 +4,7 @@
  */
 package com.espol.ed_p1_grupo12;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -31,5 +32,13 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    @FXML
+    private void switchToInicioL () throws IOException {
+        App.setRoot("CrearVehiculo");
+    }
     
+    @FXML
+    private void switchToVerVehiculo () throws IOException {
+        App.setRoot("CatalogoVehiculos");
+    }
 }
