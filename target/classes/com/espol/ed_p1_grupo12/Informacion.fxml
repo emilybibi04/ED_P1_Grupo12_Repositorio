@@ -8,19 +8,60 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.InformacionController">
    <children>
-      <VBox prefHeight="200.0" prefWidth="500.0" />
-      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="596.0" prefWidth="500.0">
+      <VBox prefHeight="200.0" prefWidth="500.0">
          <children>
-            <Label prefWidth="333.0" text="Marca" />
+            <AnchorPane prefHeight="59.0" prefWidth="500.0" />
+            <HBox prefHeight="396.0" prefWidth="500.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="396.0" prefWidth="507.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Label alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="500.0" text="mercedes" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Horizon Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="500.0" text="300 deks" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Horizon Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="500.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" text="Emily Valarezo Plaza" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" prefHeight="48.0" prefWidth="500.0" text="Propietario" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></VBox>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="701.0" prefWidth="500.0">
+         <children>
+            <Label prefHeight="36.0" prefWidth="333.0" text="Marca" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Label>
             <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="333.0" />
-            <Label prefWidth="333.0" text="Modelo" />
+            <Label prefHeight="36.0" prefWidth="333.0" text="Modelo" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Label>
             <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="333.0" />
-            <Label prefWidth="333.0" text="Precio" />
+            <Label prefHeight="36.0" prefWidth="333.0" text="Precio" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Label>
             <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="333.0" />
-            <Label prefWidth="333.0" text="Kilometraje" />
+            <Label prefHeight="36.0" prefWidth="333.0" text="Kilometraje" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Label>
             <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="333.0" />
             <AnchorPane prefHeight="43.0" prefWidth="500.0" />
             <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" style="-fx-background-color: #373766;" text="Agregar a Favoritos" textFill="WHITE">
@@ -28,18 +69,25 @@
                   <Font name="Montserrat Bold" size="18.0" />
                </font>
             </Button>
-            <AnchorPane prefHeight="27.0" prefWidth="500.0" />
+            <AnchorPane prefHeight="20.0" prefWidth="500.0" />
             <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" style="-fx-background-color: #373766;" text="Comprar" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="18.0" />
                </font>
             </Button>
-            <AnchorPane prefHeight="27.0" prefWidth="500.0" />
+            <AnchorPane prefHeight="20.0" prefWidth="500.0" />
             <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="258.0" style="-fx-background-color: #373766;" text="Filtro Avanzado" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="18.0" />
                </font>
             </Button>
+            <AnchorPane prefHeight="28.0" prefWidth="500.0" />
+            <Button mnemonicParsing="false" style="-fx-background-color: clear;" text="Regresar" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane prefHeight="49.0" prefWidth="500.0" />
          </children>
       </VBox>
    </children>
