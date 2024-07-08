@@ -12,6 +12,8 @@ import java.io.IOException;
 public class App extends Application {
     
     public static String pathImg = "src/main/resources/Pictures/";
+    public static String pathArchivo = "src/main/resources/Files/";
+    public static String pathCarros = "src/main/resources/Cars/";
     private static Scene scene;
 
     @Override

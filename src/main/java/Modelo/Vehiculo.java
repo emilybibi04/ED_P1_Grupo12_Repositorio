@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.espol.ed_p1_grupo12;
+package Modelo;
 
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Vehiculo implements Serializable {
     private String marca;
@@ -14,17 +16,15 @@ public class Vehiculo implements Serializable {
     private int kilometraje;
     private String motor;
     private String transmision;
-    private double peso;
     private String ubicacion;
     private String historialAccidentes;
     private String historialReparaciones;
     private String historialMantenimiento;
-    private String foto;
 
     // Constructor
     public Vehiculo(String marca, String modelo, int año, double precio, int kilometraje, String motor,
-                    String transmision, double peso, String ubicacion, String historialAccidentes,
-                    String historialReparaciones, String historialMantenimiento, String foto) {
+                    String transmision, String ubicacion, String historialAccidentes,
+                    String historialReparaciones, String historialMantenimiento) {
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
@@ -32,12 +32,10 @@ public class Vehiculo implements Serializable {
         this.kilometraje = kilometraje;
         this.motor = motor;
         this.transmision = transmision;
-        this.peso = peso;
         this.ubicacion = ubicacion;
         this.historialAccidentes = historialAccidentes;
         this.historialReparaciones = historialReparaciones;
         this.historialMantenimiento = historialMantenimiento;
-        this.foto = foto;
         
     }
 
@@ -97,14 +95,6 @@ public class Vehiculo implements Serializable {
         this.transmision = transmision;
     }
 
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
     public String getUbicacion() {
         return ubicacion;
     }
@@ -136,12 +126,32 @@ public class Vehiculo implements Serializable {
     public void setHistorialMantenimiento(String historialMantenimiento) {
         this.historialMantenimiento = historialMantenimiento;
     }
+    
+    public static ArrayList<Vehiculo> objetoVehiculos(String nombrearchivo) throws IOException{
+        
+        ArrayList<String> lineas = Readable.leerArchivo(nombrearchivo);
+        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
-    public String getFoto() {
-        return foto;
+        for (String line : lineas){
+            String[] elemento = line.trim().split(",");
+            String marca = elemento[0];
+            String modelo = elemento[0];
+//            int año = elemento[0];
+//            double precio = elemento[0];
+//            int kilometraje = elemento[0];
+            String motor = elemento[0];
+            String transmision = elemento[0];
+            String ubicacion = elemento[0];
+            String historialAccidentes = elemento[0];
+            String historialReparaciones = elemento[0];
+            String historialMantenimiento = elemento[0];
+            
+//            vehiculos.add(new User(correo, contraseña));
+        }
+        
+        return vehiculos;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
+
+    
 }

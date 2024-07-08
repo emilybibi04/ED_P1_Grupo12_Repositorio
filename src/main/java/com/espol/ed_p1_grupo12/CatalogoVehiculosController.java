@@ -4,6 +4,7 @@
  */
 package com.espol.ed_p1_grupo12;
 
+import Modelo.Vehiculo;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

@@ -1,0 +1,5 @@
+Tesla,Model S,2022,79999.99,15000,Electric,Automatic,California,USA,None,None,Regular
+Toyota,Corolla,2021,19999.99,30000,1.8L I4,Automatic,Tokyo,Japan,None,None,Regular
+Ford,Mustang,2020,35999.99,25000,5.0L V8,Manual,Detroit,USA,1 Accident,None,Regular
+BMW,3 Series,2019,30999.99,45000,2.0L I4,Automatic,Munich,Germany,None,Minor Repairs,Regular
+Honda,Civic,2018,17999.99,50000,2.0L I4,Automatic,Tokyo,Japan,1 Accident,Minor Repairs,Regular

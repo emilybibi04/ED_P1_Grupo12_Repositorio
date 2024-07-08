@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -35,13 +36,11 @@ public class RegistroController implements Initializable {
     @FXML
     private VBox vbox_field2_registro;
     @FXML
-    private TextField text_contra_registro;
+    private PasswordField text_contra_registro;
     @FXML
     private Button boton_registro;
     @FXML
     private Label status;
-    
-     private ServicioUsuario usuario = new ServicioUsuario();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -52,19 +51,5 @@ public class RegistroController implements Initializable {
     private void switchToInicio () throws IOException {
         App.setRoot("Inicio");
     }
-    
-    @FXML
-    protected void onRegisterButtonClick() {
-        String email = text_correo_registro.getText();
-        String password = text_contra_registro.getText();
-
-        if (usuario.registrarUsuario(email, password)) {
-            status.setText("Se registro con exito");
-        } else {
-            status.setText("Este usuario ya existe o es incorrecto");
-        }
-        System.out.println("Funciona");
-    }
-    
-    
+  
 }

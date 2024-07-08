@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.MenuController">
+<HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Menu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.MenuController">
    <children>
       <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="409.0">
          <children>
-            <Button fx:id="boton_info" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#switchToVerVehiculo" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Ver Vehículos" textFill="#373766">
+            <Button fx:id="boton_info" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToVerVehiculo" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Ver Vehículos" textFill="#373766">
                <font>
                   <Font name="Montserrat Bold" size="26.0" />
                </font>

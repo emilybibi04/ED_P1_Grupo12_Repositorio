@@ -9,6 +9,7 @@ package com.espol.ed_p1_grupo12;
  *
  * @author Cykes
  */
+import Modelo.Vehiculo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -58,12 +59,10 @@ public class CrearVehiculoController {
                     Integer.parseInt(kilometrajeField.getText()),
                     motorField.getText(),
                     transmisionField.getText(),
-                    Double.parseDouble(pesoField.getText()),
                     ubicacionField.getText(),
                     historialAccidentesField.getText(),
                     historialReparacionesField.getText(),
-                    historialMantenimientoField.getText(),
-                    fotoPath
+                    historialMantenimientoField.getText()
             );
 
             FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
