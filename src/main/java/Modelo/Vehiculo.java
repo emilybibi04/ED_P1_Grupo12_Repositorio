@@ -20,11 +20,13 @@ public class Vehiculo implements Serializable {
     private String historialAccidentes;
     private String historialReparaciones;
     private String historialMantenimiento;
+    private String nombrePropietario;
+    private String apellidoPropietario;
 
     // Constructor
     public Vehiculo(String marca, String modelo, int año, double precio, int kilometraje, String motor,
                     String transmision, String ubicacion, String historialAccidentes,
-                    String historialReparaciones, String historialMantenimiento) {
+                    String historialReparaciones, String historialMantenimiento, String nombrePropietario, String apellidoPropietario) {
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
@@ -36,7 +38,25 @@ public class Vehiculo implements Serializable {
         this.historialAccidentes = historialAccidentes;
         this.historialReparaciones = historialReparaciones;
         this.historialMantenimiento = historialMantenimiento;
+        this.nombrePropietario = nombrePropietario;
+        this.apellidoPropietario = apellidoPropietario;
         
+    }
+
+    public String getNombrePropietario() {
+        return nombrePropietario;
+    }
+
+    public String getApellidoPropietario() {
+        return apellidoPropietario;
+    }
+
+    public void setNombrePropietario(String nombrePropietario) {
+        this.nombrePropietario = nombrePropietario;
+    }
+
+    public void setApellidoPropietario(String apellidoPropietario) {
+        this.apellidoPropietario = apellidoPropietario;
     }
 
     public String getMarca() {
@@ -135,18 +155,19 @@ public class Vehiculo implements Serializable {
         for (String line : lineas){
             String[] elemento = line.trim().split(",");
             String marca = elemento[0];
-            String modelo = elemento[0];
-//            int año = elemento[0];
-//            double precio = elemento[0];
-//            int kilometraje = elemento[0];
-            String motor = elemento[0];
-            String transmision = elemento[0];
-            String ubicacion = elemento[0];
-            String historialAccidentes = elemento[0];
-            String historialReparaciones = elemento[0];
-            String historialMantenimiento = elemento[0];
-            
-//            vehiculos.add(new User(correo, contraseña));
+            String modelo = elemento[1];
+            int año = Integer.parseInt(elemento[2]);
+            double precio = Double.parseDouble(elemento[3]);
+            int kilometraje = Integer.parseInt(elemento[4]);
+            String motor = elemento[5];
+            String transmision = elemento[6];
+            String ubicacion = elemento[7] + ", " + elemento[8];
+            String historialAccidentes = elemento[9];
+            String historialReparaciones = elemento[10];
+            String historialMantenimiento = elemento[11];
+            String n = elemento[12];
+            String a = elemento[13];
+            vehiculos.add(new Vehiculo(marca, modelo, año, precio, kilometraje, motor, transmision, ubicacion, historialAccidentes, historialReparaciones, historialMantenimiento, n, a));
         }
         
         return vehiculos;

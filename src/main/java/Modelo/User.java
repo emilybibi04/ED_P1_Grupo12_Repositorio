@@ -6,10 +6,14 @@ import java.util.ArrayList;
 public class User {
     private String email;
     private String password;
+    private String nombre;
+    private String apellido;
 
-    public User(String email, String password) {
+    public User(String email, String password, String nombre, String apellido) {
         this.email = email;
         this.password = password;
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public String getEmail() {
@@ -18,6 +22,14 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
     }
     
     public static ArrayList<User> objetoUsuarios(String nombrearchivo) throws IOException{
@@ -29,7 +41,9 @@ public class User {
             String[] elemento = line.trim().split(",");
             String correo = elemento[0];
             String contraseña = elemento[1];
-            usuarios.add(new User(correo, contraseña));
+            String nombre = elemento[2];
+            String apellido = elemento[3];
+            usuarios.add(new User(correo, contraseña, nombre, apellido));
         }
         
         return usuarios;

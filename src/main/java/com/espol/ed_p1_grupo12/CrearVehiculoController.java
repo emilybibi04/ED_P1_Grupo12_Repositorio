@@ -48,32 +48,34 @@ public class CrearVehiculoController {
         }
     }
 
-    @FXML
-    private void handleCrearVehiculo(ActionEvent event) {
-        try {
-            Vehiculo vehiculo = new Vehiculo(
-                    marcaField.getText(),
-                    modeloField.getText(),
-                    Integer.parseInt(añoField.getText()),
-                    Double.parseDouble(precioField.getText()),
-                    Integer.parseInt(kilometrajeField.getText()),
-                    motorField.getText(),
-                    transmisionField.getText(),
-                    ubicacionField.getText(),
-                    historialAccidentesField.getText(),
-                    historialReparacionesField.getText(),
-                    historialMantenimientoField.getText()
-            );
-
-            FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(vehiculo);
-            out.close();
-            fileOut.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    @FXML
+//    private void handleCrearVehiculo(ActionEvent event) {
+//        try {
+//            Vehiculo vehiculo = new Vehiculo(
+//                    marcaField.getText(),
+//                    modeloField.getText(),
+//                    Integer.parseInt(añoField.getText()),
+//                    Double.parseDouble(precioField.getText()),
+//                    Integer.parseInt(kilometrajeField.getText()),
+//                    motorField.getText(),
+//                    transmisionField.getText(),
+//                    ubicacionField.getText(),
+//                    historialAccidentesField.getText(),
+//                    historialReparacionesField.getText(),
+//                    historialMantenimientoField.getText()
+//                    marcaField.getText(),
+//                    modeloField.getText(),
+//            );
+//
+//            FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
+//            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+//            out.writeObject(vehiculo);
+//            out.close();
+//            fileOut.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
     
     @FXML
     private void switchToInicio () throws IOException {
