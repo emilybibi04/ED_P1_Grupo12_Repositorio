@@ -14,7 +14,7 @@
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
          <children>
             <AnchorPane prefHeight="63.0" prefWidth="500.0" />
-            <ComboBox fx:id="cmb_carros" onAction="#mostrarCarro" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" />
+            <ComboBox fx:id="cmb_carros" onAction="#mostrarCarro" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/prueba.css" />
             <AnchorPane prefHeight="25.0" prefWidth="500.0" />
             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="326.0" prefWidth="500.0">
                <children>
@@ -23,19 +23,19 @@
                   <HBox fx:id="panel_der" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="50.0" />
                </children>
             </HBox>
-            <AnchorPane prefHeight="24.0" prefWidth="500.0" />
-            <Label fx:id="lbl_carro1" text="TESLA 300" textFill="WHITE">
+            <AnchorPane prefHeight="37.0" prefWidth="500.0" />
+            <Label fx:id="lbl_carro1" textFill="WHITE">
                <font>
                   <Font name="Horizon Bold" size="37.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_carro2" text="Label" textFill="WHITE">
+            <Label fx:id="lbl_carro2" textFill="WHITE">
                <font>
                   <Font name="Horizon Bold" size="37.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="21.0" prefWidth="500.0" />
-            <Label fx:id="lbl_propietario" text="Emily Valarezo Plaza" textFill="WHITE">
+            <Label fx:id="lbl_propietario" textFill="WHITE">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
@@ -48,57 +48,57 @@
          </children></VBox>
       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="631.0" prefWidth="500.0">
          <children>
-            <Label alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="352.0" text="A ñ o" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="352.0" text="Año" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font></Label>
             <TextField fx:id="anio_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="18.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
-            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="P r e c i o" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="Precio" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font></Label>
             <TextField fx:id="precio_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="17.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
-            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="K i l o m e t r a j e" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="Kilometraje" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="kilo_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="18.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
-            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="M o t o r" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="Motor" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="motor_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="18.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
-            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="T r a n s m i s i ó n" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="Transmisión" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="tran_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="18.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
-            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="U b i c a c i ó n" textFill="#373766">
+            <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="352.0" text="Ubicación" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="ubi_text" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="352.0">
                <font>
-                  <Font name="Montserrat Regular" size="18.0" />
+                  <Font name="Montserrat Regular" size="15.0" />
                </font></TextField>
             <AnchorPane prefHeight="55.0" prefWidth="500.0" />
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="500.0" spacing="15.0">

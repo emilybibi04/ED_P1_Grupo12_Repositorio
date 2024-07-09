@@ -49,6 +49,7 @@ public class InformacionController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        cmb_carros.setStyle("-fx-font-size: 15px; -fx-background-color: white; -fx-font-family: 'Montserrat'");
         try {
             vehiculosRegistrados = Vehiculo.objetoVehiculos(App.pathArchivo + "vehiculos.txt");
             for (Vehiculo v : vehiculosRegistrados){
@@ -86,7 +87,6 @@ public class InformacionController implements Initializable {
     }
 
     public void colocarFoto(String t) throws IOException{
-        
         String[] tipo = t.split("-");
         String marca = tipo[0].trim();
         String modelo = tipo[1].trim();
