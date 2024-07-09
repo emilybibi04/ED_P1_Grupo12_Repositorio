@@ -1,5 +1,6 @@
 package com.espol.ed_p1_grupo12;
 
+import Modelo.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +16,10 @@ public class App extends Application {
     public static String pathArchivo = "src/main/resources/Files/";
     public static String pathCarros = "src/main/resources/Cars/";
     private static Scene scene;
+    public static User cliente;
 
+    
+    
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("Inicio"), 1000, 700);

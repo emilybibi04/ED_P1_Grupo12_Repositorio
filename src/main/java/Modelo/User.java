@@ -65,5 +65,15 @@ public class User {
         }
         return false;
     }
+    
+    public static User crearUsuario(String user, String pass, ArrayList<User> lista){
+        User persona = null;
+        for (User u : lista) {
+            if (u.getEmail().equals(user) && u.getPassword().equals(pass)) {
+                persona = new User(u.getEmail(), u.getPassword(), u.getNombre(), u.getApellido());
+            }        
+        }
+        return persona;
+    }
 
 }

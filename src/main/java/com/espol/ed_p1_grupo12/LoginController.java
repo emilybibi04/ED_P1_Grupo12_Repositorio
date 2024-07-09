@@ -56,7 +56,7 @@ public class LoginController implements Initializable {
         
         boolean validar = User.verificar(correo, pass, usuariosRegistrados);
         if(validar){
-            System.out.println("Usuario validado. Cambiando a menú.");
+            App.cliente = User.crearUsuario(correo, pass, usuariosRegistrados);
             App.setRoot("Menu");
         }
         else {

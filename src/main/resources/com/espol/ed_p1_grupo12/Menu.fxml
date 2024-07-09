@@ -10,7 +10,7 @@
    <children>
       <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="409.0">
          <children>
-            <Button fx:id="boton_info" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToVerVehiculo" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Ver Vehículos" textFill="#373766">
+            <Button fx:id="boton_info" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#switchToVerVehiculo" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white" text="Ver Vehículos" textFill="#373766">
                <font>
                   <Font name="Montserrat Bold" size="26.0" />
                </font>
@@ -34,7 +34,7 @@
                </font>
             </Button>
             <AnchorPane prefHeight="20.0" prefWidth="409.0" />
-            <Button fx:id="boton_ajus" mnemonicParsing="false" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Ajustes" textFill="#373766">
+            <Button fx:id="boton_ajus" mnemonicParsing="false" onAction="#switchToAjustes" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Ajustes" textFill="#373766">
                <font>
                   <Font name="Montserrat Bold" size="26.0" />
                </font>
