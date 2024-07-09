@@ -57,5 +57,13 @@ public class User {
         }
         return false;
     }
+    public static boolean reconocerUsuarios(String correo,ArrayList <User> usuarios) throws IOException{
+        for(User usuario:usuarios){
+            if(usuario.getEmail().equals(correo)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
