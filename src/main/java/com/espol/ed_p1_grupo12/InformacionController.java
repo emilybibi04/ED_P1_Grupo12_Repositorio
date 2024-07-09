@@ -18,32 +18,20 @@ import javafx.scene.layout.HBox;
 
 public class InformacionController implements Initializable {
     
-    @FXML
-    TextField anio_text;
-    @FXML
-    TextField precio_text;
-    @FXML
-    TextField kilo_text;
-    @FXML
-    TextField motor_text;
-    @FXML
-    TextField tran_text;
-    @FXML
-    TextField ubi_text;
-    @FXML
-    ComboBox cmb_carros;
-    @FXML
-    HBox fotos_panel;
-    @FXML
-    Label lbl_carro1;
-    @FXML
-    Label lbl_carro2;
-    @FXML
-    Label lbl_propietario;
-    @FXML
-    HBox panel_der;
-    @FXML
-    HBox panel_izq;
+    @FXML TextField anio_text;
+    @FXML TextField precio_text;
+    @FXML TextField kilo_text;
+    @FXML TextField motor_text;
+    @FXML TextField tran_text;
+    @FXML TextField ubi_text;
+    @FXML ComboBox cmb_carros;
+    @FXML HBox fotos_panel;
+    @FXML Label lbl_carro1;
+    @FXML Label lbl_carro2;
+    @FXML Label lbl_propietario;
+    @FXML HBox panel_der;
+    @FXML HBox panel_izq;
+    @FXML Label lbl_pro;
     
     public static ArrayList<Vehiculo> vehiculosRegistrados = new ArrayList<>();
 
@@ -90,6 +78,8 @@ public class InformacionController implements Initializable {
         String[] tipo = t.split("-");
         String marca = tipo[0].trim();
         String modelo = tipo[1].trim();
+        
+        lbl_pro.setText("Propietario");
         
         for (Vehiculo v: vehiculosRegistrados){
             if (modelo.equals(v.getModelo())){

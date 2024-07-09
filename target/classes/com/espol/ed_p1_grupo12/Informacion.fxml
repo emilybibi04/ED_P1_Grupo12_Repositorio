@@ -14,7 +14,7 @@
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
          <children>
             <AnchorPane prefHeight="63.0" prefWidth="500.0" />
-            <ComboBox fx:id="cmb_carros" onAction="#mostrarCarro" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/prueba.css" />
+            <ComboBox fx:id="cmb_carros" onAction="#mostrarCarro" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/Style_Icono.css" />
             <AnchorPane prefHeight="25.0" prefWidth="500.0" />
             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="326.0" prefWidth="500.0">
                <children>
@@ -40,7 +40,7 @@
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
-            <Label text="Propietario" textFill="WHITE">
+            <Label fx:id="lbl_pro" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="18.0" />
                </font>
