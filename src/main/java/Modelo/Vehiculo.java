@@ -6,7 +6,8 @@ package Modelo;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Vehiculo implements Serializable {
     private String marca;
@@ -147,10 +148,10 @@ public class Vehiculo implements Serializable {
         this.historialMantenimiento = historialMantenimiento;
     }
     
-    public static ArrayList<Vehiculo> objetoVehiculos(String nombrearchivo) throws IOException{
+    public static Set<Vehiculo> objetoVehiculos(String nombrearchivo) throws IOException{
         
-        ArrayList<String> lineas = Readable.leerArchivo(nombrearchivo);
-        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+        Set<String> lineas = Readable.leerArchivo(nombrearchivo);
+        Set<Vehiculo> vehiculos = new LinkedHashSet<>();
 
         for (String line : lineas){
             String[] elemento = line.trim().split(",");

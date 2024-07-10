@@ -4,13 +4,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public interface Readable {
     
-    static ArrayList<String> leerArchivo(String nombreArchivo){
+    static Set<String> leerArchivo(String nombreArchivo){
         
-        ArrayList<String> lineas = new ArrayList<>();
+        Set<String> lineas = new LinkedHashSet<>();
         
         //Lectura del archivo y obtencion de informacion (se agrega en el Array)
         File archivo = null;

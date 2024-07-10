@@ -28,12 +28,13 @@ public class CrearVehiculoController {
     @FXML private TextField kilometrajeField;
     @FXML private TextField motorField;
     @FXML private TextField transmisionField;
-    @FXML private TextField pesoField;
     @FXML private TextField ubicacionField;
     @FXML private TextField historialAccidentesField;
     @FXML private TextField historialReparacionesField;
     @FXML private TextField historialMantenimientoField;
     @FXML private TextField fotoField;
+    @FXML private TextField nombreField;
+    @FXML private TextField apellidoField;
 
     private String fotoPath;
 
@@ -48,34 +49,34 @@ public class CrearVehiculoController {
         }
     }
 
-//    @FXML
-//    private void handleCrearVehiculo(ActionEvent event) {
-//        try {
-//            Vehiculo vehiculo = new Vehiculo(
-//                    marcaField.getText(),
-//                    modeloField.getText(),
-//                    Integer.parseInt(añoField.getText()),
-//                    Double.parseDouble(precioField.getText()),
-//                    Integer.parseInt(kilometrajeField.getText()),
-//                    motorField.getText(),
-//                    transmisionField.getText(),
-//                    ubicacionField.getText(),
-//                    historialAccidentesField.getText(),
-//                    historialReparacionesField.getText(),
-//                    historialMantenimientoField.getText()
-//                    marcaField.getText(),
-//                    modeloField.getText(),
-//            );
-//
-//            FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
-//            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-//            out.writeObject(vehiculo);
-//            out.close();
-//            fileOut.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+@FXML
+    private void handleCrearVehiculo(ActionEvent event) {
+        try {
+            Vehiculo vehiculo = new Vehiculo(
+                    marcaField.getText(),
+                    modeloField.getText(),
+                    Integer.parseInt(añoField.getText()),
+                    Double.parseDouble(precioField.getText()),
+                    Integer.parseInt(kilometrajeField.getText()),
+                    motorField.getText(),
+                    transmisionField.getText(),
+                    ubicacionField.getText(),
+                    historialAccidentesField.getText(),
+                    historialReparacionesField.getText(),
+                    historialMantenimientoField.getText(),
+                    nombreField.getText(),
+                    apellidoField.getText()
+            );
+
+            FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(vehiculo);
+            out.close();
+            fileOut.close();
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+    }
     
     @FXML
     private void switchToInicio () throws IOException {

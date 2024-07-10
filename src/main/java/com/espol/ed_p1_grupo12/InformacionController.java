@@ -4,7 +4,6 @@ import Modelo.Vehiculo;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class InformacionController implements Initializable {
     
@@ -33,7 +34,7 @@ public class InformacionController implements Initializable {
     @FXML HBox panel_izq;
     @FXML Label lbl_pro;
     
-    public static ArrayList<Vehiculo> vehiculosRegistrados = new ArrayList<>();
+    public static Set<Vehiculo> vehiculosRegistrados = new LinkedHashSet<>();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

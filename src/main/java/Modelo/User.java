@@ -1,7 +1,8 @@
 package Modelo;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class User {
     private String email;
@@ -32,10 +33,10 @@ public class User {
         return apellido;
     }
     
-    public static ArrayList<User> objetoUsuarios(String nombrearchivo) throws IOException{
+    public static Set<User> objetoUsuarios(String nombrearchivo) throws IOException{
         
-        ArrayList<String> lineas = Readable.leerArchivo(nombrearchivo);
-        ArrayList<User> usuarios = new ArrayList<>();
+        Set<String> lineas = Readable.leerArchivo(nombrearchivo);
+        Set<User> usuarios = new LinkedHashSet<>();
 
         for (String line : lineas){
             String[] elemento = line.trim().split(",");
@@ -49,7 +50,7 @@ public class User {
         return usuarios;
     }
     
-    public static boolean verificar(String email, String password, ArrayList <User> lista){
+    public static boolean verificar(String email, String password, Set <User> lista){
         for (User u : lista) {
             if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
                 return true;
@@ -57,7 +58,7 @@ public class User {
         }
         return false;
     }
-    public static boolean reconocerUsuarios(String correo,ArrayList <User> usuarios) throws IOException{
+    public static boolean reconocerUsuarios(String correo,Set <User> usuarios) throws IOException{
         for(User usuario:usuarios){
             if(usuario.getEmail().equals(correo)){
                 return true;
@@ -66,7 +67,8 @@ public class User {
         return false;
     }
     
-    public static User crearUsuario(String user, String pass, ArrayList<User> lista){
+    //Resolver eso del equals zzz
+    public static User crearUsuario(String user, String pass, Set<User> lista){
         User persona = null;
         for (User u : lista) {
             if (u.getEmail().equals(user) && u.getPassword().equals(pass)) {

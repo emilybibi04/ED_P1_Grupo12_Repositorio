@@ -8,12 +8,12 @@ import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public interface Writer {
     
-     static void escribirUsuarios(ArrayList<User> usuarios, String nombreArchivo) {
+     static void escribirUsuarios(Set<User> usuarios, String nombreArchivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
             for (User usuario : usuarios) {
                 writer.write(usuario.getEmail() + "," + usuario.getPassword() +","+usuario.getNombre()+ ","+ usuario.getApellido() +"\n");

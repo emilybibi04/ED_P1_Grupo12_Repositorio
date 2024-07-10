@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CrearVehiculoController">
+<GridPane alignment="CENTER" hgap="10" prefHeight="552.0" prefWidth="426.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CrearVehiculoController">
     <Label text="Marca:" />
     <TextField fx:id="marcaField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
@@ -28,9 +28,6 @@
 
     <Label text="Transmisión:" GridPane.rowIndex="6" />
     <TextField fx:id="transmisionField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-
-    <Label text="Peso:" GridPane.rowIndex="7" />
-    <TextField fx:id="pesoField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
     <Label text="Ubicación:" GridPane.rowIndex="8" />
     <TextField fx:id="ubicacionField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
@@ -62,8 +59,8 @@
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
+      <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />

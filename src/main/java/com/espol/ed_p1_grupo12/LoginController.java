@@ -6,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Base64;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -18,6 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class LoginController implements Initializable {
     
@@ -36,7 +37,7 @@ public class LoginController implements Initializable {
     @FXML
     private Label status;
     
-    static ArrayList<User> usuariosRegistrados = new ArrayList<>();
+    static Set<User> usuariosRegistrados = new LinkedHashSet<>();
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
