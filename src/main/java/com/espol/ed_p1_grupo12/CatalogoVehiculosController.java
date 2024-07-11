@@ -14,7 +14,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CatalogoVehiculosController {
     @FXML private TableView<Vehiculo> vehiculosTableView;
@@ -48,12 +50,12 @@ public class CatalogoVehiculosController {
         historialMantenimientoColumn.setCellValueFactory(new PropertyValueFactory<>("historialMantenimiento"));
 
         // Cargar datos de vehículos
-        List<Vehiculo> vehiculos = leerVehiculos();
+        Set<Vehiculo> vehiculos = leerVehiculos();
         vehiculosTableView.setItems(FXCollections.observableArrayList(vehiculos));
     }
 
-    private List<Vehiculo> leerVehiculos() {
-        List<Vehiculo> vehiculos = new ArrayList<>();
+    private Set<Vehiculo> leerVehiculos() {
+        Set<Vehiculo> vehiculos = new HashSet<>();
         try {
             FileInputStream fileIn = new FileInputStream("vehiculos.dat");
             ObjectInputStream in = new ObjectInputStream(fileIn);

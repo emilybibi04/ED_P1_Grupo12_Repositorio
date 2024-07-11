@@ -29,8 +29,11 @@
     <Label text="Transmisión:" GridPane.rowIndex="6" />
     <TextField fx:id="transmisionField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 
-    <Label text="Ubicación:" GridPane.rowIndex="8" />
-    <TextField fx:id="ubicacionField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Label text="Ciudad:" GridPane.rowIndex="7" />
+    <TextField fx:id="ciudadField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label text="País:" GridPane.rowIndex="8" />
+    <TextField fx:id="paisField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
 
     <Label text="Historial de Accidentes:" GridPane.rowIndex="9" />
     <TextField fx:id="historialAccidentesField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
@@ -46,26 +49,26 @@
     <Button onAction="#handleSubirFoto" text="Subir Foto" GridPane.columnIndex="2" GridPane.rowIndex="12" />
 
     <Button onAction="#handleCrearVehiculo" text="Crear" GridPane.columnSpan="2" GridPane.rowIndex="13" />
-   <Button fx:id="Volver" onMouseClicked="#switchToInicio" prefHeight="25.0" prefWidth="71.0" text="Volver" GridPane.columnIndex="2" GridPane.rowIndex="13" />
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" />
-      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+    <Button fx:id="Volver" onMouseClicked="#switchToInicio" prefHeight="25.0" prefWidth="71.0" text="Volver" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
 </GridPane>

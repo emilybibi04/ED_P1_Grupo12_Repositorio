@@ -28,7 +28,8 @@ public class CrearVehiculoController {
     @FXML private TextField kilometrajeField;
     @FXML private TextField motorField;
     @FXML private TextField transmisionField;
-    @FXML private TextField ubicacionField;
+    @FXML private TextField ciudadField;
+    @FXML private TextField paisField;
     @FXML private TextField historialAccidentesField;
     @FXML private TextField historialReparacionesField;
     @FXML private TextField historialMantenimientoField;
@@ -49,7 +50,7 @@ public class CrearVehiculoController {
         }
     }
 
-@FXML
+    @FXML
     private void handleCrearVehiculo(ActionEvent event) {
         try {
             Vehiculo vehiculo = new Vehiculo(
@@ -60,7 +61,7 @@ public class CrearVehiculoController {
                     Integer.parseInt(kilometrajeField.getText()),
                     motorField.getText(),
                     transmisionField.getText(),
-                    ubicacionField.getText(),
+                    ciudadField.getText()+","+paisField.getText(),
                     historialAccidentesField.getText(),
                     historialReparacionesField.getText(),
                     historialMantenimientoField.getText(),
@@ -74,12 +75,12 @@ public class CrearVehiculoController {
             out.close();
             fileOut.close();
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
-    
+
     @FXML
-    private void switchToInicio () throws IOException {
+    private void switchToInicio() throws IOException {
         App.setRoot("Menu");
     }
 }
