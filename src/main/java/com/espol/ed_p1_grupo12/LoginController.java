@@ -1,6 +1,7 @@
 package com.espol.ed_p1_grupo12;
 
 import static Modelo.Readable.leerArchivo;
+import Modelo.Seccion;
 import Modelo.User;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -57,7 +58,8 @@ public class LoginController implements Initializable {
         
         boolean validar = User.verificar(correo, pass, usuariosRegistrados);
         if(validar){
-            App.cliente = User.crearUsuario(correo, pass, usuariosRegistrados);
+            User usuarioLogueado = User.crearUsuario(correo, pass, usuariosRegistrados);
+            Seccion.setLoggedUser(usuarioLogueado);
             App.setRoot("Menu");
         }
         else {
@@ -65,9 +67,5 @@ public class LoginController implements Initializable {
             text_correo_login.clear();
             text_contra_login.clear();
         }
-    }
-
-    
-    
-    
+    }    
 }

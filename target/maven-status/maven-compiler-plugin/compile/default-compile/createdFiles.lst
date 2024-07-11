@@ -10,5 +10,6 @@ Modelo\User.class
 com\espol\ed_p1_grupo12\App.class
 com\espol\ed_p1_grupo12\CrearVehiculoController.class
 com\espol\ed_p1_grupo12\LoginController.class
+Modelo\Seccion.class
 com\espol\ed_p1_grupo12\RegistroController.class
 Modelo\Vehiculo.class

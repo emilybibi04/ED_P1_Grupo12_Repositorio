@@ -9,7 +9,10 @@ package com.espol.ed_p1_grupo12;
  *
  * @author Cykes
  */
+import Modelo.Seccion;
+import Modelo.User;
 import Modelo.Vehiculo;
+import java.io.BufferedWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -17,6 +20,7 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
@@ -52,33 +56,33 @@ public class CrearVehiculoController {
 
     @FXML
     private void handleCrearVehiculo(ActionEvent event) {
+        User loggedUser = Seccion.getLoggedUser();
         try {
-            Vehiculo vehiculo = new Vehiculo(
-                    marcaField.getText(),
-                    modeloField.getText(),
-                    Integer.parseInt(añoField.getText()),
-                    Double.parseDouble(precioField.getText()),
-                    Integer.parseInt(kilometrajeField.getText()),
-                    motorField.getText(),
-                    transmisionField.getText(),
-                    ciudadField.getText()+","+paisField.getText(),
-                    historialAccidentesField.getText(),
-                    historialReparacionesField.getText(),
-                    historialMantenimientoField.getText(),
-                    nombreField.getText(),
-                    apellidoField.getText()
-            );
+            // Crea una cadena con los datos del vehículo
+            String vehiculoData = marcaField.getText() + "," +
+                                  modeloField.getText() + "," +
+                                  añoField.getText() + "," +
+                                  precioField.getText() + "," +
+                                  kilometrajeField.getText() + "," +
+                                  motorField.getText() + "," +
+                                  transmisionField.getText() + "," +
+                                  ciudadField.getText() + "," + paisField.getText() + "," +
+                                  historialAccidentesField.getText() + "," +
+                                  historialReparacionesField.getText() + "," +
+                                  historialMantenimientoField.getText() + "," +
+                                  loggedUser.getNombre() + "," +
+                                  loggedUser.getApellido();
 
-            FileOutputStream fileOut = new FileOutputStream("vehiculos.dat", true);
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(vehiculo);
-            out.close();
-            fileOut.close();
-        } catch (Exception e) {
+            // Escribe la cadena en el archivo
+            FileWriter fileWriter = new FileWriter(App.pathArchivo + "vehiculos.txt", true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(vehiculoData + "\n");
+            bufferedWriter.close();
+            fileWriter.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
     @FXML
     private void switchToInicio() throws IOException {
         App.setRoot("Menu");
