@@ -71,7 +71,8 @@ public class CrearVehiculoController {
                                   historialReparacionesField.getText() + "," +
                                   historialMantenimientoField.getText() + "," +
                                   loggedUser.getNombre() + "," +
-                                  loggedUser.getApellido();
+                                  loggedUser.getApellido()+ "," +
+                                  fotoField.getText(); 
 
             // Escribe la cadena en el archivo
             FileWriter fileWriter = new FileWriter(App.pathArchivo + "vehiculos.txt", true);
@@ -83,6 +84,7 @@ public class CrearVehiculoController {
             e.printStackTrace();
         }
     }
+    
     @FXML
     private void switchToInicio() throws IOException {
         App.setRoot("Menu");
