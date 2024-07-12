@@ -176,4 +176,9 @@ public class MisVehiculosController implements Initializable {
         }
     }
     
+    @FXML
+    private void switchToAnadir () throws IOException {
+        App.setRoot("CrearVehiculo");
+    }
+    
 }
