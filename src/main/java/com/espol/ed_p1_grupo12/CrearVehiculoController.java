@@ -2,6 +2,7 @@ package com.espol.ed_p1_grupo12;
 
 import Modelo.Seccion;
 import Modelo.User;
+import Modelo.Vehiculo;
 import java.io.BufferedWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +12,8 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class CrearVehiculoController {
     @FXML private TextField marcaField;
@@ -41,7 +44,7 @@ public class CrearVehiculoController {
             fotoField.setText(fotoPath);
         }
     }
-
+    static Set<Vehiculo> vehiculosCreados = new LinkedHashSet<>();
     @FXML
     private void handleCrearVehiculo(ActionEvent event) {
         User loggedUser = Seccion.getLogged();
@@ -68,6 +71,9 @@ public class CrearVehiculoController {
             bufferedWriter.write(vehiculoData + "\n");
             bufferedWriter.close();
             fileWriter.close();
+            String ubicacion=ciudadField.getText() + "," + paisField.getText();
+            Vehiculo vehiculo=new Vehiculo(marcaField.getText(),modeloField.getText(),Integer.parseInt(añoField.getText()),Double.parseDouble(precioField.getText()),Integer.parseInt(kilometrajeField.getText()),motorField.getText(),transmisionField.getText(),ubicacion,historialAccidentesField.getText(),historialReparacionesField.getText(),historialMantenimientoField.getText(),loggedUser.getNombre(),loggedUser.getApellido(),fotoField.getText());
+            vehiculosCreados.add(vehiculo); 
         } catch (IOException e) {
             e.printStackTrace();
         }

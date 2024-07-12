@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.MisVehiculosController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.MisVehiculosController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
          <children>
             <AnchorPane prefHeight="63.0" prefWidth="500.0" />
-            <ComboBox fx:id="cmb_carros_V" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/Style_Icono.css" />
+            <ComboBox fx:id="cmb_carros_V" onAction="#mostrarCarro" prefHeight="44.0" prefWidth="354.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/Style_Icono.css" />
             <AnchorPane prefHeight="25.0" prefWidth="500.0" />
             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="326.0" prefWidth="500.0">
                <children>
@@ -117,7 +117,7 @@
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="boton_add" mnemonicParsing="false" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
+                  <Button fx:id="boton_add" mnemonicParsing="false" onAction="#switchToCrearVehiculos" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
@@ -126,7 +126,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="47.0" prefWidth="500.0" spacing="15.0">
                <children>
-                  <Button fx:id="boton_remove" mnemonicParsing="false" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Remover" textFill="WHITE">
+                  <Button fx:id="boton_remove" mnemonicParsing="false" onAction="#eliminarVehiculo" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Remover" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
