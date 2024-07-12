@@ -3,6 +3,7 @@ package com.espol.ed_p1_grupo12;
 import Modelo.Seccion;
 import Modelo.User;
 import Modelo.Vehiculo;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -168,7 +169,7 @@ public class InformacionController implements Initializable {
         if (vehiculoSeleccionado != null) {
             User loggedUser = Seccion.getLogged();
             if (loggedUser != null) {
-                String nombreArchivo = loggedUser.getNombre() + "_" + loggedUser.getApellido() + "_favoritos.txt";
+                String nombreArchivo = obtenerNombreArchivoFavoritos(loggedUser);
                 try (FileWriter writer = new FileWriter(App.pathArchivo + nombreArchivo, true)) {
                     writer.write(vehiculoSeleccionado.toString() + System.lineSeparator());
                 } catch (IOException e) {
@@ -177,6 +178,22 @@ public class InformacionController implements Initializable {
             } else {
                 System.out.println("No hay usuario logueado.");
             }
+        }
+    }
+    
+    private String obtenerNombreArchivoFavoritos(User user) {
+        return user.getNombre() + "_" + user.getApellido() + "_favoritos.txt";
+    }
+
+    public void actualizarArchivoFavoritos(User userAnterior, User userNuevo) {
+        String nombreArchivoAnterior = obtenerNombreArchivoFavoritos(userAnterior);
+        String nombreArchivoNuevo = obtenerNombreArchivoFavoritos(userNuevo);
+
+        File archivoAnterior = new File(App.pathArchivo + nombreArchivoAnterior);
+        File archivoNuevo = new File(App.pathArchivo + nombreArchivoNuevo);
+
+        if (archivoAnterior.exists() && !archivoNuevo.exists()) {
+            archivoAnterior.renameTo(archivoNuevo);
         }
     }
 }

@@ -85,11 +85,16 @@ public class AjustesController implements Initializable {
             Stage s = (Stage) bt1.getScene().getWindow();
             s.close();
             try {
+                User usuarioAnterior = new User(App.cliente.getNombre(), App.cliente.getApellido(), App.cliente.getEmail(), App.cliente.getPassword());
                 String nuevoNombre = tx1.getText();
                 String nuevoApellido = tx2.getText();
                 User.actualizarArchivo(App.cliente.getEmail(), App.cliente.getEmail(), App.cliente.getPassword(), nuevoNombre, nuevoApellido);
                 App.cliente.setNombre(tx1.getText());
                 App.cliente.setApellido(tx2.getText());
+                
+                InformacionController informacionController = new InformacionController();
+                informacionController.actualizarArchivoFavoritos(usuarioAnterior, App.cliente);
+
                 App.setRoot("Ajustes");
             } catch (IOException ex) {
                 ex.printStackTrace();
