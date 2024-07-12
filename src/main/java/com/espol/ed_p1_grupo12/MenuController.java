@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.espol.ed_p1_grupo12;
 
 import java.io.IOException;
@@ -43,4 +39,10 @@ public class MenuController implements Initializable {
     private void switchToMisVehiculos() throws IOException {
         App.setRoot("MisVehiculos");
     }
+    
+    @FXML
+    private void switchToCalculadora() throws IOException {
+        App.setRoot("Calculadora");
+    }
+    
 }

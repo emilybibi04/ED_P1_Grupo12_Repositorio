@@ -4,6 +4,7 @@ import com.espol.ed_p1_grupo12.App;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -70,30 +71,44 @@ public class User {
         return usuarios;
     }
     
-    public static boolean verificar(String email, String password, Set <User> lista){
+    public static final Comparator<User> emailComparator = Comparator.comparing(User::getEmail);
+    public static final Comparator<User> passwordComparator = Comparator.comparing(User::getPassword);
+
+    public static boolean verificar(String email, String password, Set<User> lista) {
         for (User u : lista) {
-            if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    public static boolean reconocerUsuarios(String correo,Set <User> usuarios) throws IOException{
-        for(User usuario:usuarios){
-            if(usuario.getEmail().equals(correo)){
+            if (emailComparator.compare(new User(email, "", "", ""), u) == 0 && passwordComparator.compare(new User("", password, "", ""), u) == 0) {
                 return true;
             }
         }
         return false;
     }
     
-    //Resolver eso del equals zzz
-    public static User crearUsuario(String user, String pass, Set<User> lista){
+    public static boolean reconocerUsuarios(String correo, Set<User> usuarios) throws IOException {
+        for (User usuario : usuarios) {
+            if (compareStrings(correo, usuario.getEmail())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean compareStrings(String str1, String str2) {
+        if (str1 == null || str2 == null) return false;
+        if (str1.length() != str2.length()) return false;
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static User crearUsuario(String user, String pass, Set<User> lista) {
         User persona = null;
         for (User u : lista) {
-            if (u.getEmail().equals(user) && u.getPassword().equals(pass)) {
+            if (compareStrings(u.getEmail(), user) && compareStrings(u.getPassword(), pass)) {
                 persona = new User(u.getEmail(), u.getPassword(), u.getNombre(), u.getApellido());
-            }        
+            }
         }
         return persona;
     }
@@ -104,7 +119,7 @@ public class User {
             String line = lines.get(i);
             String[] partes = line.split(",");
             String correo = partes[0];
-            if (correo.equals(in)) {
+            if (compareStrings(correo, in)) {
                 lines.set(i, newEmail + "," + newPassword + "," + newNombre + "," + newApellido);
                 break;
             }

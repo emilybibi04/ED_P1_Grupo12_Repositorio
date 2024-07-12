@@ -28,7 +28,7 @@
                </font>
             </Button>
             <AnchorPane prefHeight="20.0" prefWidth="216.0" />
-            <Button fx:id="boton_cal" mnemonicParsing="false" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Calculadora" textFill="#373766">
+            <Button fx:id="boton_cal" mnemonicParsing="false" onAction="#switchToCalculadora" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: white;" text="Calculadora" textFill="#373766">
                <font>
                   <Font name="Montserrat Bold" size="26.0" />
                </font>
