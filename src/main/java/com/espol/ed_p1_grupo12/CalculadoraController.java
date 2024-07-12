@@ -107,4 +107,10 @@ public class CalculadoraController implements Initializable {
         }
         return null;
     }
+    
+    @FXML
+    private void switchToMenu() throws IOException {
+        App.setRoot("Menu");
+    }
+    
 }

@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Calculadora.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CalculadoraController">
    <children>
       <HBox prefHeight="575.0" prefWidth="1000.0">
@@ -111,14 +110,14 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="505.0" prefWidth="500.0">
                <children>
-                    <ComboBox fx:id="comboBox2" prefHeight="44.0" prefWidth="366.0" style="-fx-background-color: #373766;" stylesheets="@../../../StylesCSS/Style_Icono.css" />
+                    <ComboBox fx:id="comboBox2" prefHeight="44.0" prefWidth="366.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/Style_Icono2.css" />
                   <AnchorPane prefHeight="28.0" prefWidth="480.0" />
-                  <Label fx:id="lbl_c21" textFill="#373766">
+                  <Label fx:id="lbl_c21" textFill="WHITE">
                      <font>
                         <Font name="Horizon Bold" size="28.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbl_c22" textFill="#373766">
+                  <Label fx:id="lbl_c22" textFill="WHITE">
                      <font>
                         <Font name="Horizon Bold" size="28.0" />
                      </font>
@@ -128,7 +127,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                            <children>
-                              <Label text="Año                    " textFill="#373766">
+                              <Label text="Año                    " textFill="WHITE">
                                  <font>
                                     <Font name="Montserrat Regular" size="18.0" />
                                  </font>
@@ -142,7 +141,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                            <children>
-                              <Label text="Precio               " textFill="#373766">
+                              <Label text="Precio               " textFill="WHITE">
                                  <font>
                                     <Font name="Montserrat Regular" size="18.0" />
                                  </font>
@@ -156,7 +155,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                            <children>
-                              <Label text="Kilometraje     " textFill="#373766">
+                              <Label text="Kilometraje     " textFill="WHITE">
                                  <font>
                                     <Font name="Montserrat Regular" size="18.0" />
                                  </font>
@@ -170,7 +169,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                            <children>
-                              <Label text="Motor                " textFill="#373766">
+                              <Label text="Motor                " textFill="WHITE">
                                  <font>
                                     <Font name="Montserrat Regular" size="18.0" />
                                  </font>
@@ -184,7 +183,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
                            <children>
-                              <Label text="Transmision    " textFill="#373766">
+                              <Label text="Transmision    " textFill="WHITE">
                                  <font>
                                     <Font name="Montserrat Regular" size="18.0" />
                                  </font>
@@ -204,17 +203,27 @@
       </HBox>
       <VBox alignment="CENTER" prefHeight="117.0" prefWidth="1000.0">
          <children>
-              <Button onAction="#compararCarros" style="-fx-background-color: white;" text="Comparar" textFill="#373766">
-               <font>
-                  <Font name="Montserrat Bold" size="18.0" />
-               </font>
-            </Button>
-            <AnchorPane prefHeight="5.0" prefWidth="1000.0" />
-              <Label fx:id="resultLabel" alignment="CENTER" textFill="WHITE">
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                    <Button onAction="#compararCarros" style="-fx-background-color: #373766;" text="Comparar" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button onAction="#switchToMenu" style="-fx-background-color: #373766;" text="Regresar" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="14.0" prefWidth="1000.0" />
+              <Label fx:id="resultLabel" alignment="CENTER" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="18.0" />
                </font>
             </Label>
+            <AnchorPane prefHeight="15.0" prefWidth="1000.0" />
          </children>
       </VBox>
    </children>
