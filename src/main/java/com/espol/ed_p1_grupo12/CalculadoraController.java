@@ -11,16 +11,30 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class CalculadoraController implements Initializable {
 
-    @FXML
-    private ComboBox<String> comboBox1;
-    @FXML
-    private ComboBox<String> comboBox2;
-    @FXML
-    private Label resultLabel;
-
+    @FXML private ComboBox<String> comboBox1;
+    @FXML private ComboBox<String> comboBox2;
+    @FXML private Label resultLabel;
+    @FXML private TextField lbl_year1;
+    @FXML private TextField lbl_precio1;
+    @FXML private TextField lbl_kilo1;
+    @FXML private TextField lbl_motor1;
+    @FXML private TextField lbl_trans1;
+    
+    @FXML private TextField lbl_year2;
+    @FXML private TextField lbl_precio2;
+    @FXML private TextField lbl_kilo2;
+    @FXML private TextField lbl_motor2;
+    @FXML private TextField lbl_trans2;
+    
+    @FXML private Label lbl_c11;
+    @FXML private Label lbl_c12;
+    @FXML private Label lbl_c21;
+    @FXML private Label lbl_c22;
+    
     private Set<Vehiculo> vehiculosRegistrados;
 
     @Override
@@ -51,9 +65,23 @@ public class CalculadoraController implements Initializable {
             Vehiculo carro2 = obtenerVehiculo(seleccion2);
 
             if (carro1 != null && carro2 != null) {
-                String infoCarro1 = carro1.toString();
-                String infoCarro2 = carro2.toString();
-                // Comparador para comparar por precio, kilometraje y año
+                
+                lbl_c11.setText(carro1.getMarca());
+                lbl_c12.setText(carro1.getModelo());
+                lbl_year1.setText(String.valueOf(carro1.getAño()));
+                lbl_precio1.setText(String.valueOf(carro1.getPrecio()));
+                lbl_kilo1.setText(String.valueOf(carro1.getKilometraje()));
+                lbl_motor1.setText(carro1.getMotor());
+                lbl_trans1.setText(carro1.getTransmision());
+    
+                lbl_c21.setText(carro2.getMarca());
+                lbl_c22.setText(carro2.getModelo());
+                lbl_year2.setText(String.valueOf(carro2.getAño()));
+                lbl_precio2.setText(String.valueOf(carro2.getPrecio()));
+                lbl_kilo2.setText(String.valueOf(carro2.getKilometraje()));
+                lbl_motor2.setText(carro2.getMotor());
+                lbl_trans2.setText(carro2.getTransmision());
+                
                 Comparator<Vehiculo> comparator = Comparator.comparing(Vehiculo::getPrecio)
                         .thenComparing(Vehiculo::getKilometraje)
                         .thenComparing(Vehiculo::getAño);
@@ -63,7 +91,8 @@ public class CalculadoraController implements Initializable {
                         (comparacion < 0 ? carro1.getMarca() + " - " + carro1.getModelo() + " es mejor que " + carro2.getMarca() + " - " + carro2.getModelo() :
                                 "Ambos carros son iguales en los criterios comparados.");
 
-                resultLabel.setText("Información del Carro 1:\n" + infoCarro1 + "\n\nInformación del Carro 2:\n" + infoCarro2 + "\n\n" + mejorCarro);
+                
+                resultLabel.setText(mejorCarro);
             }
         } else {
             resultLabel.setText("Por favor, selecciona dos carros para comparar.");

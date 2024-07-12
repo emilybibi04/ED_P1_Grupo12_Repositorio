@@ -4,16 +4,218 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CalculadoraController">
-    <children>
-        <ComboBox fx:id="comboBox1" />
-        <ComboBox fx:id="comboBox2" />
-        <Button text="Comparar" onAction="#compararCarros" />
-        <Label fx:id="resultLabel" />
-    </children>
-    <padding>
-        <Insets top="10" right="10" bottom="10" left="10" />
-    </padding>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Calculadora.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.CalculadoraController">
+   <children>
+      <HBox prefHeight="575.0" prefWidth="1000.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="505.0" prefWidth="500.0">
+                <children>
+                    <ComboBox fx:id="comboBox1" prefHeight="44.0" prefWidth="366.0" style="-fx-background-color: white;" stylesheets="@../../../StylesCSS/Style_Icono2.css" />
+                  <AnchorPane prefHeight="23.0" prefWidth="480.0" />
+                  <Label fx:id="lbl_c11" textFill="WHITE">
+                     <font>
+                        <Font name="Horizon Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_c12" textFill="WHITE">
+                     <font>
+                        <Font name="Horizon Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="18.0" prefWidth="480.0" />
+                  <VBox prefHeight="254.0" prefWidth="480.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Año                    " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_year1" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Precio               " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_precio1" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Kilometraje     " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_kilo1" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Motor                " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_motor1" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Transmision    " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_trans1" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                </children>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="505.0" prefWidth="500.0">
+               <children>
+                    <ComboBox fx:id="comboBox2" prefHeight="44.0" prefWidth="366.0" style="-fx-background-color: #373766;" stylesheets="@../../../StylesCSS/Style_Icono.css" />
+                  <AnchorPane prefHeight="28.0" prefWidth="480.0" />
+                  <Label fx:id="lbl_c21" textFill="#373766">
+                     <font>
+                        <Font name="Horizon Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_c22" textFill="#373766">
+                     <font>
+                        <Font name="Horizon Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="30.0" prefWidth="200.0" />
+                  <VBox prefHeight="254.0" prefWidth="480.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Año                    " textFill="#373766">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_year2" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Precio               " textFill="#373766">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_precio2" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Kilometraje     " textFill="#373766">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_kilo2" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Motor                " textFill="#373766">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_motor2" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="480.0">
+                           <children>
+                              <Label text="Transmision    " textFill="#373766">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lbl_trans2" prefHeight="33.0" prefWidth="192.0">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="117.0" prefWidth="1000.0">
+         <children>
+              <Button onAction="#compararCarros" style="-fx-background-color: white;" text="Comparar" textFill="#373766">
+               <font>
+                  <Font name="Montserrat Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane prefHeight="5.0" prefWidth="1000.0" />
+              <Label fx:id="resultLabel" alignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
 </VBox>
