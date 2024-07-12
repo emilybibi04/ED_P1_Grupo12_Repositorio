@@ -25,10 +25,6 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    @FXML
-    private void switchToInicioL() throws IOException {
-        App.setRoot("CrearVehiculo");
-    }
     
     @FXML
     private void switchToVerVehiculo() throws IOException {
@@ -38,5 +34,15 @@ public class MenuController implements Initializable {
     @FXML
     private void switchToAjustes() throws IOException {
         App.setRoot("Ajustes");
+    }
+    
+    @FXML
+    private void switchToMisFav() throws IOException {
+        App.setRoot("Favoritos");
+    }
+    
+    @FXML
+    private void switchToMisVehiculos() throws IOException {
+        App.setRoot("MisVehiculos");
     }
 }

@@ -1,15 +1,1 @@
-com\espol\ed_p1_grupo12\AjustesController.class
-com\espol\ed_p1_grupo12\InformacionController.class
-com\espol\ed_p1_grupo12\CatalogoVehiculosController.class
 module-info.class
-Modelo\Readable.class
-Modelo\Writer.class
-com\espol\ed_p1_grupo12\InicioController.class
-com\espol\ed_p1_grupo12\MenuController.class
-Modelo\User.class
-com\espol\ed_p1_grupo12\App.class
-com\espol\ed_p1_grupo12\CrearVehiculoController.class
-com\espol\ed_p1_grupo12\LoginController.class
-Modelo\Seccion.class
-com\espol\ed_p1_grupo12\RegistroController.class
-Modelo\Vehiculo.class

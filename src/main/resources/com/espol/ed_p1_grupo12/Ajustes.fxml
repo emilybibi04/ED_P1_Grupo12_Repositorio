@@ -12,30 +12,30 @@
       <AnchorPane prefHeight="700.0" prefWidth="72.0" />
       <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="612.0" prefWidth="481.0">
          <children>
-            <Label fx:id="lbl_nom" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="401.0" text="Emily Valarezo" textFill="#373766">
+            <Label fx:id="lbl_nom" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="480.0" textFill="#373766">
                <font>
                   <Font name="Montserrat Bold" size="48.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_correo" alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="419.0" text="emilyvalarezop@gmail.com" textFill="#373766">
+            <Label fx:id="lbl_correo" alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="480.0" textFill="#373766">
                <font>
                   <Font name="Montserrat Regular" size="23.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="35.0" prefWidth="481.0" />
-            <Button fx:id="boton_nom" mnemonicParsing="false" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Nombre" textFill="WHITE">
+            <Button fx:id="boton_nom" mnemonicParsing="false" onAction="#cambiarNombre" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Nombre" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="22.0" />
                </font>
             </Button>
             <AnchorPane prefHeight="18.0" prefWidth="481.0" />
-            <Button fx:id="boton_correo" mnemonicParsing="false" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Correo" textFill="WHITE">
+            <Button fx:id="boton_correo" mnemonicParsing="false" onAction="#cambiarCorreo" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Correo" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="22.0" />
                </font>
             </Button>
             <AnchorPane prefHeight="18.0" prefWidth="481.0" />
-            <Button fx:id="boton_contra" mnemonicParsing="false" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Contraseña" textFill="WHITE">
+            <Button fx:id="boton_contra" mnemonicParsing="false" onAction="#cambiarContra" prefHeight="60.0" prefWidth="355.0" style="-fx-background-color: #373766;" text="Cambiar Contraseña" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="22.0" />
                </font>
