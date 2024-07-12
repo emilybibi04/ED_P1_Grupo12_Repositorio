@@ -1,7 +1,10 @@
 package com.espol.ed_p1_grupo12;
 
+import Modelo.Seccion;
+import Modelo.User;
 import Modelo.Vehiculo;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +19,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 public class InformacionController implements Initializable {
     
@@ -35,6 +40,14 @@ public class InformacionController implements Initializable {
     @FXML Label lbl_pro;
     
     public static Set<Vehiculo> vehiculosRegistrados = new LinkedHashSet<>();
+    @FXML
+    private Button boton_fav;
+    @FXML
+    private Button boton_filtro;
+    @FXML
+    private Button boton_comprar;
+    @FXML
+    private Button boton_regresar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -94,7 +107,7 @@ public class InformacionController implements Initializable {
                 lbl_carro2.setText(v.getMarca());
                 lbl_propietario.setText(v.getNombrePropietario() + " " + v.getApellidoPropietario());
 
-                // Cargar la imagen del vehículo
+                // Cargar la imagen del vehículo por directorio de vehiculos.txt
                 ImageView imgView = new ImageView();
                 try (FileInputStream input = new FileInputStream(v.getRutaImagen())) {
                     Image image = new Image(input);
@@ -111,7 +124,6 @@ public class InformacionController implements Initializable {
             }
         }
 
-        // Cargar las imágenes de las flechas
         panel_der.getChildren().clear();
         panel_izq.getChildren().clear();
         ImageView imgView1 = new ImageView();
@@ -138,4 +150,32 @@ public class InformacionController implements Initializable {
         panel_der.getChildren().addAll(imgView2);
     }
     
+    @FXML
+    private void agregarFavorito(MouseEvent event) {
+        String tipo = (String) cmb_carros.getValue();
+        String[] tipoArray = tipo.split("-");
+        String modelo = tipoArray[1].trim();
+        Vehiculo vehiculoSeleccionado = null;
+
+        for (Vehiculo v : vehiculosRegistrados) {
+            if (modelo.equals(v.getModelo())) {
+                vehiculoSeleccionado = v;
+                break;
+            }
+        }
+
+        if (vehiculoSeleccionado != null) {
+            User loggedUser = Seccion.getLogged();
+            if (loggedUser != null) {
+                String nombreArchivo = loggedUser.getNombre() + "_" + loggedUser.getApellido() + "_favoritos.txt";
+                try (FileWriter writer = new FileWriter(App.pathArchivo + nombreArchivo, true)) {
+                    writer.write(vehiculoSeleccionado.toString() + System.lineSeparator());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("No hay usuario logueado.");
+            }
+        }
+    }
 }

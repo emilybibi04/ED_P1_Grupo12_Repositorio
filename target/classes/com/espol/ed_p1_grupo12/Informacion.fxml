@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.InformacionController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../../StylesCSS/Style_Informacion.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espol.ed_p1_grupo12.InformacionController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
          <children>
@@ -103,7 +103,7 @@
             <AnchorPane prefHeight="55.0" prefWidth="500.0" />
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="500.0" spacing="15.0">
                <children>
-                  <Button fx:id="boton_fav" mnemonicParsing="false" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Favorito" textFill="WHITE">
+                  <Button fx:id="boton_fav" mnemonicParsing="false" onMouseClicked="#agregarFavorito" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Favorito" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>

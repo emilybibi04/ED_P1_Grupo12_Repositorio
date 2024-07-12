@@ -1,0 +1,2 @@
+BMW,3 Series,2019,30999.99,45000,2.0L I4,Automatic,Munich,Germany,None,Minor Repairs,Regular,Emily,Aguirre,C:\Users\Cykes\Desktop\ED_P1_Grupo12_Repositorio\src\main\resources\Cars\BMW.png
+Toyota,Corolla,2021,19999.99,30000,1.8L I4,Automatic,Tokyo,Japan,None,None,Regular,Emily,Plaza,C:\Users\Cykes\Desktop\ED_P1_Grupo12_Repositorio\src\main\resources\Cars\Toyota.png
