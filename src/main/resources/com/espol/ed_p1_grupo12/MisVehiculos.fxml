@@ -112,7 +112,7 @@
             <AnchorPane prefHeight="55.0" prefWidth="500.0" />
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="500.0" spacing="15.0">
                <children>
-                  <Button fx:id="boton_edit" mnemonicParsing="false" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Editar" textFill="WHITE">
+                  <Button fx:id="boton_edit" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Editar" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
@@ -120,7 +120,7 @@
 
                   
 
-                  <Button fx:id="boton_add" mnemonicParsing="false" onMouseClicked="#switchToAnadir" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
+                  <Button fx:id="boton_add" mnemonicParsing="false" onAction="#switchToAnadir" onMouseClicked="#switchToAnadir" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
 
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />

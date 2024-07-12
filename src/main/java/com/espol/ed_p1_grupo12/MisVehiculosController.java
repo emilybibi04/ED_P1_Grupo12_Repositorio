@@ -128,11 +128,11 @@ public class MisVehiculosController implements Initializable {
         panel_izq.getChildren().addAll(imgView1);
         panel_der.getChildren().addAll(imgView2);
     }
-    
+    /*
     @FXML
     private void switchToCrearVehiculos () throws IOException {
         App.setRoot("CrearVehiculo");
-    }
+    }*/
     
     @FXML
     private void eliminarVehiculo() throws IOException{
@@ -180,5 +180,62 @@ public class MisVehiculosController implements Initializable {
     private void switchToAnadir () throws IOException {
         App.setRoot("CrearVehiculo");
     }
+    
+    @FXML
+    private void editar() throws IOException{
+        String tipo = (String) cmb_carros_V.getValue();
+    
+        if (tipo == null || tipo.isEmpty()) {
+            System.out.println("No se ha seleccionado ningún vehículo.");
+            return;
+        }
+
+        String[] tipoSplit = tipo.split("-");
+        String marca = tipoSplit[0].trim();
+        String modelo = tipoSplit[1].trim();
+
+        // Buscar el vehículo a editar en la lista de vehículos creados
+        Vehiculo vehiculoAEditar = null;
+        for (Vehiculo v : vehiculosCreados) {
+            if (v.getMarca().equals(marca) && v.getModelo().equals(modelo)) {
+                vehiculoAEditar = v;
+                break;
+            }
+        }
+
+        // Si se encuentra el vehículo, actualizar sus datos
+        if (vehiculoAEditar != null) {
+            // Obtener los nuevos datos de los campos de texto
+            try {
+                int anio = Integer.parseInt(anio_text_V.getText());
+                double precio = Double.parseDouble(precio_text_V.getText().replace(" USD", ""));
+                int kilometraje = Integer.parseInt(kilo_text_V.getText());
+                String motor = motor_text_V.getText();
+                String transmision = tran_text_V.getText();
+                String ubicacion = ubi_text_V.getText();
+
+                // Actualizar los datos del vehículo
+                vehiculoAEditar.setAño(anio);
+                vehiculoAEditar.setPrecio(precio);
+                vehiculoAEditar.setKilometraje(kilometraje);
+                vehiculoAEditar.setMotor(motor);
+                vehiculoAEditar.setTransmision(transmision);
+                vehiculoAEditar.setUbicacion(ubicacion);
+
+                System.out.println("Vehículo editado: " + marca + " - " + modelo);
+
+                // Opcional: Actualizar el ComboBox para reflejar los cambios
+                cmb_carros_V.getItems().clear();
+                for (Vehiculo v : vehiculosCreados) {
+                    cmb_carros_V.getItems().addAll(v.getMarca() + " - " + v.getModelo());
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error en los datos ingresados: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Vehículo no encontrado: " + marca + " - " + modelo);
+        }
+
+        }
     
 }
