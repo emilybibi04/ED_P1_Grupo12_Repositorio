@@ -37,4 +37,9 @@ public class MisVehiculosController implements Initializable {
         App.setRoot("Menu");
     }
     
+    @FXML
+    private void switchToAnadir () throws IOException {
+        App.setRoot("CrearVehiculo");
+    }
+    
 }

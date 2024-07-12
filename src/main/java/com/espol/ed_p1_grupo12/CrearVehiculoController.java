@@ -29,7 +29,7 @@ public class CrearVehiculoController {
     @FXML private TextField nombreField;
     @FXML private TextField apellidoField;
 
-    private String fotoPath;
+       private String fotoPath;
 
     @FXML
     private void handleSubirFoto(ActionEvent event) {
@@ -37,10 +37,11 @@ public class CrearVehiculoController {
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imágenes", "*.png", "*.jpg", "*.jpeg"));
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
-            fotoPath = file.getAbsolutePath();
+            // Guarda solo el nombre del archivo o la ruta relativa dentro de tus recursos
+            fotoPath = "Cars/" + file.getName(); // Suponiendo que las fotos están en src/main/resources/Cars
             fotoField.setText(fotoPath);
         }
-    }
+    }    
 
     @FXML
     private void handleCrearVehiculo(ActionEvent event) {
@@ -60,7 +61,7 @@ public class CrearVehiculoController {
                                   historialMantenimientoField.getText() + "," +
                                   loggedUser.getNombre() + "," +
                                   loggedUser.getApellido()+ "," +
-                                  fotoField.getText(); 
+                                  fotoPath; // Usamos la ruta relativa
 
             // Escribe la cadena en el archivo
             FileWriter fileWriter = new FileWriter(App.pathArchivo + "vehiculos.txt", true);
@@ -72,7 +73,8 @@ public class CrearVehiculoController {
             e.printStackTrace();
         }
     }
-    
+
+
     
     
     @FXML

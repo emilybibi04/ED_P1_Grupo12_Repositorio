@@ -117,7 +117,7 @@
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="boton_add" mnemonicParsing="false" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
+                  <Button fx:id="boton_add" mnemonicParsing="false" onMouseClicked="#switchToAnadir" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #373766;" text="Añadir" textFill="WHITE">
                      <font>
                         <Font name="Montserrat Bold" size="18.0" />
                      </font>
