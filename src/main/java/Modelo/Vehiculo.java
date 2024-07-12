@@ -23,11 +23,12 @@ public class Vehiculo implements Serializable {
     private String historialMantenimiento;
     private String nombrePropietario;
     private String apellidoPropietario;
+    private String rutaImagen;
 
     // Constructor
     public Vehiculo(String marca, String modelo, int año, double precio, int kilometraje, String motor,
                     String transmision, String ubicacion, String historialAccidentes,
-                    String historialReparaciones, String historialMantenimiento, String nombrePropietario, String apellidoPropietario) {
+                    String historialReparaciones, String historialMantenimiento, String nombrePropietario, String apellidoPropietario, String rutaImagen) {
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
@@ -41,7 +42,7 @@ public class Vehiculo implements Serializable {
         this.historialMantenimiento = historialMantenimiento;
         this.nombrePropietario = nombrePropietario;
         this.apellidoPropietario = apellidoPropietario;
-        
+        this.rutaImagen = rutaImagen;
     }
 
     public String getNombrePropietario() {
@@ -168,10 +169,14 @@ public class Vehiculo implements Serializable {
             String historialMantenimiento = elemento[11];
             String n = elemento[12];
             String a = elemento[13];
-            vehiculos.add(new Vehiculo(marca, modelo, año, precio, kilometraje, motor, transmision, ubicacion, historialAccidentes, historialReparaciones, historialMantenimiento, n, a));
-        }
+            String i = elemento[14];
+            vehiculos.add(new Vehiculo(marca, modelo, año, precio, kilometraje, motor, transmision, ubicacion, historialAccidentes, historialReparaciones, historialMantenimiento, n, a,i ));        }
         
         return vehiculos;
+    }
+
+    public String getRutaImagen() {
+        return rutaImagen;
     }
 
 
