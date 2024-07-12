@@ -1,0 +1,1 @@
+Ford,Mustang,2020,35999.99,25000,5.0L V8,Manual,Detroit,USA,1 Accident,None,Regular,Emily,Delgado,C:\Users\Cykes\Desktop\ED_P1_Grupo12_Repositorio\src\main\resources\Cars\Ford.png
