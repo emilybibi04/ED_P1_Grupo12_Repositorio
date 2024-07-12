@@ -12,8 +12,6 @@ public interface Readable {
     static Set<String> leerArchivo(String nombreArchivo){
         
         Set<String> lineas = new LinkedHashSet<>();
-        
-        //Lectura del archivo y obtencion de informacion (se agrega en el Array)
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;

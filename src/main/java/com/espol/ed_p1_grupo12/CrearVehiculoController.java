@@ -1,17 +1,7 @@
 package com.espol.ed_p1_grupo12;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Cykes
- */
 import Modelo.Seccion;
 import Modelo.User;
-import Modelo.Vehiculo;
 import java.io.BufferedWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,10 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 
 public class CrearVehiculoController {
     @FXML private TextField marcaField;

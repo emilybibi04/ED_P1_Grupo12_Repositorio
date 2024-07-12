@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import java.io.IOException;
@@ -25,7 +21,6 @@ public class Vehiculo implements Serializable {
     private String apellidoPropietario;
     private String rutaImagen;
 
-    // Constructor
     public Vehiculo(String marca, String modelo, int año, double precio, int kilometraje, String motor,
                     String transmision, String ubicacion, String historialAccidentes,
                     String historialReparaciones, String historialMantenimiento, String nombrePropietario, String apellidoPropietario, String rutaImagen) {
