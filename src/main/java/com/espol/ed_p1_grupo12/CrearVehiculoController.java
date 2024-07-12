@@ -78,6 +78,8 @@ public class CrearVehiculoController {
             String ubicacion=ciudadField.getText() + "," + paisField.getText();
             Vehiculo vehiculo=new Vehiculo(marcaField.getText(),modeloField.getText(),Integer.parseInt(añoField.getText()),Double.parseDouble(precioField.getText()),Integer.parseInt(kilometrajeField.getText()),motorField.getText(),transmisionField.getText(),ubicacion,historialAccidentesField.getText(),historialReparacionesField.getText(),historialMantenimientoField.getText(),loggedUser.getNombre(),loggedUser.getApellido(),fotoField.getText());
             vehiculosCreados.add(vehiculo); 
+            System.out.println("Se ha creado el vehiculo");
+            App.setRoot("MisVehiculos");
         } catch (IOException e) {
             e.printStackTrace();
         }

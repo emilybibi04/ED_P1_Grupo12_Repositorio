@@ -167,5 +167,58 @@ public class FavoritosController implements Initializable {
         panel_izq.getChildren().addAll(imgView1);
         panel_der.getChildren().addAll(imgView2);
     }
+    @FXML
+    private void eliminar() throws IOException{
+        // Obtener el vehículo seleccionado del ComboBox
+    String tipo = (String) cmb_carros_F.getValue();
+    
+    if (tipo == null || tipo.isEmpty()) {
+        System.out.println("No se ha seleccionado ningún vehículo.");
+        return;
+    }
+
+    String[] tipoSplit = tipo.split("-");
+    String marca = tipoSplit[0].trim();
+    String modelo = tipoSplit[1].trim();
+
+    // Buscar el vehículo a eliminar en la lista de vehículos registrados
+    Vehiculo vehiculoAEliminar = null;
+    for (Vehiculo v : vehiculosRegistrados) {
+        if (v.getMarca().equals(marca) && v.getModelo().equals(modelo)) {
+            vehiculoAEliminar = v;
+            break;
+        }
+    }
+
+    // Si se encuentra el vehículo, eliminarlo de la lista y del ComboBox
+    if (vehiculoAEliminar != null) {
+        vehiculosRegistrados.remove(vehiculoAEliminar);
+        cmb_carros_F.getItems().remove(tipo);
+        System.out.println("Vehículo eliminado: " + marca + " - " + modelo);
+
+        // Limpiar los campos de texto y las imágenes
+        anio_text_F.setText("");
+        precio_text_F.setText("");
+        kilo_text_F.setText("");
+        motor_text_F.setText("");
+        tran_text_F.setText("");
+        ubi_text_F.setText("");
+        lbl_carro1.setText("");
+        lbl_carro2.setText("");
+        lbl_propietario.setText("");
+        fotos_panel.getChildren().clear();
+
+        // Actualizar el archivo de favoritos
+        User loggedUser = Seccion.getLogged();
+        if (loggedUser != null) {
+            Vehiculo.guardarVehiculos(App.pathArchivo + loggedUser.getNombre() + "_" + loggedUser.getApellido() + "_favoritos.txt", vehiculosRegistrados);
+        } else {
+            System.out.println("No hay usuario logueado.");
+        }
+    } else {
+        System.out.println("Vehículo no encontrado: " + marca + " - " + modelo);
+    }
+        
+    }
     
 }
