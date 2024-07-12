@@ -1,7 +1,17 @@
 package Modelo;
 
+import com.espol.ed_p1_grupo12.App;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 public class User {
@@ -92,6 +102,20 @@ public class User {
             }        
         }
         return persona;
+    }
+    
+    public static void actualizarArchivo(String in, String newEmail, String newPassword, String newNombre, String newApellido) throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get(App.pathArchivo + "usuarios.txt"));
+        for (int i = 0; i < lines.size(); i++) {
+            String line = lines.get(i);
+            String[] partes = line.split(",");
+            String correo = partes[0];
+            if (correo.equals(in)) {
+                lines.set(i, newEmail + "," + newPassword + "," + newNombre + "," + newApellido);
+                break;
+            }
+        }
+        Files.write(Paths.get(App.pathArchivo + "usuarios.txt"), lines);
     }
 
 }
