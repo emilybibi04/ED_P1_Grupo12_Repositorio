@@ -125,13 +125,14 @@ public class FavoritosController implements Initializable {
                 lbl_propietario.setText(v.getNombrePropietario() + " " + v.getApellidoPropietario());
 
                 // Cargar la imagen del vehículo por directorio de vehiculos.txt
-                ImageView imgView = new ImageView();
-                try (FileInputStream input = new FileInputStream(v.getRutaImagen())) {
-                    Image image = new Image(input);
+                 ImageView imgView = new ImageView();
+                try {
+                    String imagePath = "/".concat(v.getRutaImagen());
+                    Image image = new Image(getClass().getResourceAsStream(imagePath));
                     imgView = new ImageView(image);
                     imgView.setFitHeight(326);
                     imgView.setFitWidth(353);
-                } catch (IOException e) {
+                } catch (Exception e) {
                     System.out.println("No se encuentra la imagen: " + v.getRutaImagen());
                 }
 
