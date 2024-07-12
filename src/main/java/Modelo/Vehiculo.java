@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedHashSet;
@@ -177,6 +179,14 @@ public class Vehiculo implements Serializable {
     public String getRutaImagen() {
         return rutaImagen;
     }
+    public static void guardarVehiculos(String rutaArchivo, Set<Vehiculo> vehiculos) throws IOException {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo))) {
+        for (Vehiculo vehiculo : vehiculos) {
+            writer.write(vehiculo.toString());
+            writer.newLine();
+        }
+    }
+}
 
 
     
