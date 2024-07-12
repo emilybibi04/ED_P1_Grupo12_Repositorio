@@ -4,10 +4,9 @@ import Modelo.Vehiculo;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Comparator;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.ResourceBundle;
 import java.util.Set;
-import java.util.stream.Collectors;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -22,7 +21,7 @@ public class CalculadoraController implements Initializable {
     @FXML
     private Label resultLabel;
 
-    private List<Vehiculo> vehiculosRegistrados;
+    private Set<Vehiculo> vehiculosRegistrados;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -31,7 +30,7 @@ public class CalculadoraController implements Initializable {
 
         try {
             Set<Vehiculo> vehiculosSet = Vehiculo.objetoVehiculos(App.pathArchivo + "vehiculos.txt");
-            vehiculosRegistrados = vehiculosSet.stream().collect(Collectors.toList());
+            vehiculosRegistrados = new LinkedHashSet<>(vehiculosSet); // Using LinkedHashSet to maintain insertion order
 
             for (Vehiculo v : vehiculosRegistrados) {
                 comboBox1.getItems().add(v.getMarca() + " - " + v.getModelo());
@@ -54,12 +53,15 @@ public class CalculadoraController implements Initializable {
             if (carro1 != null && carro2 != null) {
                 String infoCarro1 = carro1.toString();
                 String infoCarro2 = carro2.toString();
+                // Comparador para comparar por precio, kilometraje y año
                 Comparator<Vehiculo> comparator = Comparator.comparing(Vehiculo::getPrecio)
                         .thenComparing(Vehiculo::getKilometraje)
                         .thenComparing(Vehiculo::getAño);
 
                 int comparacion = comparator.compare(carro1, carro2);
-                String mejorCarro = comparacion > 0 ? carro2.getMarca() + " - " + carro2.getModelo() + " es mejor que " + carro1.getMarca() + " - " + carro1.getModelo() : (comparacion < 0 ? carro1.getMarca() + " - " + carro1.getModelo() + " es mejor que " + carro2.getMarca() + " - " + carro2.getModelo() : "Ambos carros son iguales en los criterios comparados.");
+                String mejorCarro = comparacion > 0 ? carro2.getMarca() + " - " + carro2.getModelo() + " es mejor que " + carro1.getMarca() + " - " + carro1.getModelo() :
+                        (comparacion < 0 ? carro1.getMarca() + " - " + carro1.getModelo() + " es mejor que " + carro2.getMarca() + " - " + carro2.getModelo() :
+                                "Ambos carros son iguales en los criterios comparados.");
 
                 resultLabel.setText("Información del Carro 1:\n" + infoCarro1 + "\n\nInformación del Carro 2:\n" + infoCarro2 + "\n\n" + mejorCarro);
             }

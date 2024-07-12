@@ -114,16 +114,18 @@ public class User {
     }
     
     public static void actualizarArchivo(String in, String newEmail, String newPassword, String newNombre, String newApellido) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get(App.pathArchivo + "usuarios.txt"));
-        for (int i = 0; i < lines.size(); i++) {
-            String line = lines.get(i);
+        Set<String> lines = new LinkedHashSet<>(Files.readAllLines(Paths.get(App.pathArchivo + "usuarios.txt")));
+
+        for (String line : lines) {
             String[] partes = line.split(",");
             String correo = partes[0];
             if (compareStrings(correo, in)) {
-                lines.set(i, newEmail + "," + newPassword + "," + newNombre + "," + newApellido);
+                lines.remove(line);
+                lines.add(newEmail + "," + newPassword + "," + newNombre + "," + newApellido);
                 break;
             }
         }
+        
         Files.write(Paths.get(App.pathArchivo + "usuarios.txt"), lines);
     }
 
