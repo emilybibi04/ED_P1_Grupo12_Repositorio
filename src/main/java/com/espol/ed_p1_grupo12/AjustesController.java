@@ -26,7 +26,7 @@ public class AjustesController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        App.cliente = Seccion.getLoggedUser();
+        App.cliente = Seccion.getLogged();
         String nom = App.cliente.getNombre();
         String ap = App.cliente.getApellido();
         String correo = App.cliente.getEmail();

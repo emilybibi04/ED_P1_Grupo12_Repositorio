@@ -59,7 +59,7 @@ public class LoginController implements Initializable {
         boolean validar = User.verificar(correo, pass, usuariosRegistrados);
         if(validar){
             User usuarioLogueado = User.crearUsuario(correo, pass, usuariosRegistrados);
-            Seccion.setLoggedUser(usuarioLogueado);
+            Seccion.setLogged(usuarioLogueado);
             App.setRoot("Menu");
         }
         else {

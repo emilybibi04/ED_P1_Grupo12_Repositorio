@@ -11,11 +11,12 @@ package Modelo;
 public class Seccion {
     private static User logged;
 
-    public static void setLoggedUser(User user) {
+    public static void setLogged(User user) {
         logged = user;
     }
 
-    public static User getLoggedUser() {
+    public static User getLogged() {
         return logged;
     }
+    
 }

@@ -56,7 +56,7 @@ public class CrearVehiculoController {
 
     @FXML
     private void handleCrearVehiculo(ActionEvent event) {
-        User loggedUser = Seccion.getLoggedUser();
+        User loggedUser = Seccion.getLogged();
         try {
             // Crea una cadena con los datos del vehículo
             String vehiculoData = marcaField.getText() + "," +
@@ -84,6 +84,8 @@ public class CrearVehiculoController {
             e.printStackTrace();
         }
     }
+    
+    
     
     @FXML
     private void switchToInicio() throws IOException {

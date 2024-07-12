@@ -163,7 +163,7 @@ public class Vehiculo implements Serializable {
             int kilometraje = Integer.parseInt(elemento[4]);
             String motor = elemento[5];
             String transmision = elemento[6];
-            String ubicacion = elemento[7] + ", " + elemento[8];
+            String ubicacion = elemento[7] + "," + elemento[8];
             String historialAccidentes = elemento[9];
             String historialReparaciones = elemento[10];
             String historialMantenimiento = elemento[11];
@@ -174,6 +174,10 @@ public class Vehiculo implements Serializable {
         
         return vehiculos;
     }
+
+    @Override
+    public String toString() {
+        return  marca + "," + modelo + "," + año + "," + precio + "," + kilometraje + "," + motor + "," + transmision + "," + ubicacion + "," + historialAccidentes + "," + historialReparaciones + "," + historialMantenimiento + "," + nombrePropietario + "," + apellidoPropietario + "," + rutaImagen ;    }
 
     public String getRutaImagen() {
         return rutaImagen;
